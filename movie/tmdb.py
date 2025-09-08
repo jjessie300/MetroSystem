@@ -26,10 +26,10 @@ genre_map = {
 }
 
 language = input("What language movie are you looking for? ")
-# selected_genres = ["Comedy", "Animation"]
+selected_genres = ["Comedy", "Animation"]
 
 # language = None 
-selected_genres = []
+# selected_genres = []
 
 
 def fetch_now_playing(language, selected_genres): 
