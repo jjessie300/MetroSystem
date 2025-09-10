@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, session 
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
+import tmdb
 
 
 app = Flask(__name__)
@@ -88,9 +89,16 @@ def register():
 def dashboard(): 
     return render_template("dashboard.html")
 
-# test
-# username: hello
-# password: pass
+@app.route("/search", methods=['POST'])
+def get_user_preferences(): 
+    selected_genres = request.form.getlist("genre")
+    selected_language = request.form["language"] # ONLY ALLOWS USER TO SELECT ONE LANGUAGE, IF NOT WONT WORK!!!
+    #print(selected_language)
+
+    results = tmdb.fetch_now_playing(selected_language, selected_genres)
+    print(results)
+    return render_template("search.html", user_movies=results)
+
 
 if __name__ == "__main__": 
     with app.app_context(): 

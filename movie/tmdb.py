@@ -25,13 +25,14 @@ genre_map = {
     "Western": 37
 }
 
-language = input("What language movie are you looking for? ")
-selected_genres = ["Comedy", "Animation"]
+#language = input("What language movie are you looking for? ")
+#selected_genres = ["Comedy", "Animation"]
 
 # language = None 
 # selected_genres = []
 
 
+# Function to fetch now playing movies based on user preferences using the API 
 def fetch_now_playing(language, selected_genres): 
     url = f'{BASE_URL}/movie/now_playing?api_key={API_KEY}'
 
@@ -43,23 +44,24 @@ def fetch_now_playing(language, selected_genres):
     for movie in data["results"]:
         # Check language 
         if language == None or movie["original_language"] == language: 
-            print(movie["original_language"])
+            #print(movie["original_language"])
     
             # Check genres
             if selected_genres == [] or check_genres(get_genre_ids(selected_genres), movie): 
-                print(check_genres(get_genre_ids(selected_genres), movie))
-                print(movie["id"])
-                print(movie["genre_ids"])
+                #print(check_genres(get_genre_ids(selected_genres), movie))
+                #print(movie["id"])
+                #print(movie["genre_ids"])
                 filtered_movies.append(movie["title"])
     
-    print(filtered_movies)
+    #print(filtered_movies)
+    return filtered_movies 
 
 
 def get_genre_ids(selected_genres): 
     genre_ids = []
     for genre in selected_genres: 
         genre_ids.append(genre_map[genre])
-    print(genre_ids)
+    #print(genre_ids)
     return genre_ids
 
 # Check if any of the selected genres apply 
@@ -71,4 +73,5 @@ def check_genres(genre_ids, movie):
            
     return False 
 
-fetch_now_playing(language, selected_genres) 
+
+# fetch_now_playing(language, selected_genres) 

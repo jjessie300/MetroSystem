@@ -7,67 +7,102 @@
 </head>
 <body>
     <h1>Login successful, Welcome {{username}}!</h1>
-    <p>Welcome to your dashboard</p>
-    <h2>Select the movie genres:</h2>
+    <p>Welcome to your dashboard!</p>
 
-    <input type = "checkbox" id = "action" name = "genre" value = "Action"> 
-    <label for = "action">Action</label><br>
 
-    <input type = "checkbox" id = "adventure" name = "genre" value = "Adventure"> 
-    <label for = "adventure">Adventure</label><br>
+<form action="/search" method="POST">
+    <div style="display: flex; gap: 50px;"> 
+        <div>
+            <h3>Select genres: </h3>
+            <input type = "checkbox" id = "action" name = "genre" value = "Action"> 
+            <label for = "action">Action</label><br>
 
-    <input type = "checkbox" id = "animation" name = "genre" value = "Animation"> 
-    <label for = "animation">Animation</label><br>
+            <input type = "checkbox" id = "adventure" name = "genre" value = "Adventure"> 
+            <label for = "adventure">Adventure</label><br>
 
-    <input type = "checkbox" id = "comedy" name = "genre" value = "Comedy"> 
-    <label for = "comedy">Comedy</label><br>
+            <input type = "checkbox" id = "animation" name = "genre" value = "Animation"> 
+            <label for = "animation">Animation</label><br>
 
-    <input type = "checkbox" id = "crime" name = "genre" value = "Crime"> 
-    <label for = "crime">Crime</label><br>
+            <input type = "checkbox" id = "comedy" name = "genre" value = "Comedy"> 
+            <label for = "comedy">Comedy</label><br>
 
-    <input type = "checkbox" id = "documentary" name = "genre" value = "Documentary"> 
-    <label for = "documentary">Documentary</label><br>
+            <input type = "checkbox" id = "crime" name = "genre" value = "Crime"> 
+            <label for = "crime">Crime</label><br>
 
-    <input type = "checkbox" id = "drama" name = "genre" value = "Drama"> 
-    <label for = "drama">Drama</label><br>
+            <input type = "checkbox" id = "documentary" name = "genre" value = "Documentary"> 
+            <label for = "documentary">Documentary</label><br>
 
-    <input type = "checkbox" id = "family" name = "genre" value = "Family"> 
-    <label for = "family">Family</label><br>
+            <input type = "checkbox" id = "drama" name = "genre" value = "Drama"> 
+            <label for = "drama">Drama</label><br>
 
-    <input type = "checkbox" id = "fantasy" name = "genre" value = "Fantasy"> 
-    <label for = "fantasy">Fantasy</label><br>
+            <input type = "checkbox" id = "family" name = "genre" value = "Family"> 
+            <label for = "family">Family</label><br>
 
-    <input type = "checkbox" id = "history" name = "genre" value = "History"> 
-    <label for = "history">History</label><br>
+            <input type = "checkbox" id = "fantasy" name = "genre" value = "Fantasy"> 
+            <label for = "fantasy">Fantasy</label><br>
 
-    <input type = "checkbox" id = "horror" name = "genre" value = "Horror"> 
-    <label for = "horror">Horror</label><br>
+            <input type = "checkbox" id = "history" name = "genre" value = "History"> 
+            <label for = "history">History</label><br>
 
-    <input type = "checkbox" id = "music" name = "genre" value = "Music"> 
-    <label for = "music">Music</label><br>
+            <input type = "checkbox" id = "horror" name = "genre" value = "Horror"> 
+            <label for = "horror">Horror</label><br>
 
-    <input type = "checkbox" id = "mystery" name = "genre" value = "Mystery"> 
-    <label for = "mystery">Mystery</label><br>
+            <input type = "checkbox" id = "music" name = "genre" value = "Music"> 
+            <label for = "music">Music</label><br>
 
-    <input type = "checkbox" id = "romance" name = "genre" value = "Romance"> 
-    <label for = "romance">Romance</label><br>
+            <input type = "checkbox" id = "mystery" name = "genre" value = "Mystery"> 
+            <label for = "mystery">Mystery</label><br>
 
-    <input type = "checkbox" id = "science fiction" name = "genre" value = "Science Fiction"> 
-    <label for = "science fiction">Science Fiction</label><br>
+            <input type = "checkbox" id = "romance" name = "genre" value = "Romance"> 
+            <label for = "romance">Romance</label><br>
 
-    <input type = "checkbox" id = "tv movie" name = "genre" value = "TV Movie"> 
-    <label for = "tv movie">TV Movie</label><br>
+            <input type = "checkbox" id = "science fiction" name = "genre" value = "Science Fiction"> 
+            <label for = "science fiction">Science Fiction</label><br>
 
-    <input type = "checkbox" id = "thriller" name = "genre" value = "Thriller"> 
-    <label for = "thriller">Thriller</label><br>
+            <input type = "checkbox" id = "tv movie" name = "genre" value = "TV Movie"> 
+            <label for = "tv movie">TV Movie</label><br>
 
-    <input type = "checkbox" id = "war" name = "genre" value = "War"> 
-    <label for = "war">War</label><br>
+            <input type = "checkbox" id = "thriller" name = "genre" value = "Thriller"> 
+            <label for = "thriller">Thriller</label><br>
 
-    <input type = "checkbox" id = "western" name = "genre" value = "Western"> 
-    <label for = "western">Western</label><br><br>
+            <input type = "checkbox" id = "war" name = "genre" value = "War"> 
+            <label for = "war">War</label><br>
 
+            <input type = "checkbox" id = "western" name = "genre" value = "Western"> 
+            <label for = "western">Western</label><br>
+        </div>
+
+        <div>
+            <h3>Select languages: </h3>
+            <input type = "checkbox" id = "english" name = "language" value = "en"> 
+            <label for = "english">English</label><br>
+
+            <input type = "checkbox" id = "french" name = "language" value = "fr"> 
+            <label for = "french">French</label><br>
+
+            <input type = "checkbox" id = "spanish" name = "language" value = "es"> 
+            <label for = "spanish">Spanish</label><br>
+
+            <input type = "checkbox" id = "german" name = "language" value = "de"> 
+            <label for = "german">German</label><br>
+
+            <input type = "checkbox" id = "hindi" name = "language" value = "hi"> 
+            <label for = "hindi">Hindi</label><br>
+
+            <input type = "checkbox" id = "mandarin" name = "language" value = "zh"> 
+            <label for = "mandarin">Mandarin</label><br>
+
+            <input type = "checkbox" id = "korean" name = "language" value = "ko"> 
+            <label for = "korean">Korean</label><br>
+
+            <input type = "checkbox" id = "japanese" name = "language" value = "ja"> 
+            <label for = "japanese">Japanese</label><br>
+        </div>
+    </div>
+
+    <br>
     <button type="submit">Submit</button>
+</form>
 
 </body>
 </html>
